@@ -3,6 +3,5 @@ void setup() {
 }
 
 void draw() {
-  shot shotOne = new shot(250, 250, 10);
   
 }

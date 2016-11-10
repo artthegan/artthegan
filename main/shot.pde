@@ -10,11 +10,22 @@ class shot {
   }
   
   void display() {
+    ellipseMode(CENTER);
     ellipse(xCord, yCord, Size, Size);
   }
   
-  void shoot(float speed, int xDirection, int yDirection) {
-     xCord = speed * (xDirection);
-     yCord = speed * (yDirection);
+  void begin(float speed, int xDirection, int yDirection) {
+    if (xCord < width && xCord > 0 && yCord < height && yCord > 0) {
+     xCord = xCord + speed * xDirection;
+     yCord = yCord + speed * yDirection;
+    }
+  }
+  
+  float xCord() {
+    return xCord;
+  }
+  
+  float yCord() {
+    return yCord;
   }
 }
