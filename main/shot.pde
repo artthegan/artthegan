@@ -1,9 +1,9 @@
-class shot {
+class Shot {
   float xCord;
   float yCord;
   float Size;
   
-  shot (float x, float y, float size) {
+  Shot (float x, float y, float size) {
     xCord = x;
     yCord = y;
     Size = size;
@@ -21,11 +21,20 @@ class shot {
     }
   }
   
+  void end() {
+    xCord = width + Size;
+    yCord = height + Size;
+  }
+  
   float xCord() {
     return xCord;
   }
   
   float yCord() {
     return yCord;
+  }
+  
+  float Size() {
+   return Size; 
   }
 }
