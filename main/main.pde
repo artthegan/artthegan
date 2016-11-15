@@ -1,5 +1,5 @@
 Game game = new Game(2, 3);
-Shot bullet = new Shot(250,250, 10);
+Shot bullet = new Shot(250, 250, 10);
 
 void setup() {
   size(500, 500);

@@ -22,7 +22,7 @@ class Game {
   
   boolean gameOver() {
     boolean res = false;
-    for (int playerNumber = 0; playerNumber < player.length; playerNumber++) {         
+    for (int playerNumber = 0; playerNumber < player.length; playerNumber++) { 
       if (player[playerNumber] <= 0) {
          res = true;
       }
@@ -41,7 +41,6 @@ class Game {
       lifes = str(player[playerNumber]);
       
       display[playerNumber] = "Player " + playerNum + ": " + lifes + " lifes ";
-      
     }
     text = join(display, " | ");
     text(text, xCord, yCord);
