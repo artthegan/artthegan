@@ -1,0 +1,59 @@
+<<<<<<< Updated upstream
+=======
+// Krav til manden
+// kan gå frit, op, ned, til side og man skal selv kunne bestemme 
+// - hvilke taster man vil bruge.
+// Der er skal være to mænd 
+
+
+
+class Man {
+  float sizeWidth;
+  float sizeHeight;
+  float xCord;
+  float yCord;
+  
+
+  Man (float Width, float Height, float x, float y) {
+    sizeWidth = Width;
+    sizeHeight = Height; 
+    xCord = x;
+    yCord = y;
+  }
+  
+  void display() {
+    rect(xCord, yCord, sizeWidth, sizeHeight);
+  }
+
+  void movement(char up, char down, char left, char right, int speed) {
+    
+    if(keyPressed) {
+      if (key == up) {
+        yCord -= speed;
+      } else if (key == down) {
+        yCord += speed;
+      }
+      if (key == left) {
+        xCord -= speed;
+      } else if (key == right) {
+        xCord += speed;
+      }
+    }
+  }
+  
+    void movementarrows(int speed) {
+    if(keyPressed) {
+      if (key == UP) {
+        yCord -= speed;
+      } else if (key == DOWN) {
+        yCord += speed;
+      }
+      if (key == LEFT) {
+        xCord -= speed;
+      } else if (key == RIGHT) {
+        xCord += speed;
+      }
+    }
+  }
+}
+>>>>>>> Stashed changes

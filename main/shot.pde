@@ -14,6 +14,7 @@ class shot {
     ellipse(xCord, yCord, Size, Size);
   }
   
+<<<<<<< Updated upstream
   void begin(float speed, int xDirection, int yDirection) {
     if (xCord < width && xCord > 0 && yCord < height && yCord > 0) {
      xCord = xCord + speed * xDirection;
@@ -27,5 +28,11 @@ class shot {
   
   float yCord() {
     return yCord;
+=======
+  void shoot(float speed, int xDirection, int yDirection){
+     xCord = speed * (xDirection);
+     yCord = speed * (yDirection);
+>>>>>>> Stashed changes
   }
+  
 }
