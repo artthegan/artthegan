@@ -53,4 +53,10 @@ class Man {
       }
     }
   }
+  float xCord() {
+    return xCord;
+  }
+  float yCord() {
+    return yCord;
+  }
 }
