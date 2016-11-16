@@ -47,17 +47,22 @@ class Game {
     text(text, xCord, yCord);
   }
   
-  void Trigger(char button, Man man) {
+  void Trigger(char button, Man man, Man target, int targetNumber) {
     ArrayList<Shot> shots = new ArrayList<Shot>();
-    while(keyPressed && key == button) {
-      //get a customerName
-      //get an amount
+    if (keyPressed && key == button) {
       for (int shotNumber = 0; ; shotNumber++) { 
-        shots.add(shotNumber, new Shot(man, 10));
-        
-        shots.get(shotNumber).begin(3, man.xDirection);
+        shots.add(new Shot(man, 10));
+        Shot bullet = shots.get(shotNumber);
+        bullet.begin(3, man);
       }
     }
-    
+    for (int shotNumber = 0; ; shotNumber++) { 
+        //max to 10 shots at a time
+        shotNumber = shotNumber % 10;
+        shots.add(shotNumber, new Shot(man, 10));
+        shots.get(shotNumber).begin(3, man);
+        game.collision(target, targetNumber, shots.get(shotNumber));
+    }
   }
+  
 }
