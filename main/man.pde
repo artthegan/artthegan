@@ -43,14 +43,14 @@ class Man {
   
     void movementarrows(int speed) {
     if(keyPressed) {
-      if (key == UP) {
+      if (keyCode == UP) {
         yCord -= speed;
-      } else if (key == DOWN) {
-        yCord += speed;
+      } else if (keyCode == DOWN) {
+        yCord += speed;  
       }
-      if (key == LEFT) {
+      if (keyCode == LEFT) {
         xCord -= speed;
-      } else if (key == RIGHT) {
+      } else if (keyCode == RIGHT) {
         xCord += speed;
       }
     }
