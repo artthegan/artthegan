@@ -1,6 +1,7 @@
 class Game {
   int[] player;
   
+  //max 4 players
   Game (int playerNum, int lifes) {
     
     //create all players
@@ -44,5 +45,10 @@ class Game {
     }
     text = join(display, " | ");
     text(text, xCord, yCord);
+  }
+  
+  void gun(Man man) {
+    
+    
   }
 }

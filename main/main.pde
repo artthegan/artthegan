@@ -1,6 +1,8 @@
 Game game = new Game(2, 3);
+
 Man Jacob = new Man(30, 50, 250);
 Man Aggi = new Man(30, 450, 250);
+
 Shot bullet;
 
 void setup() {
