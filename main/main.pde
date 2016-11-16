@@ -6,14 +6,11 @@ void setup() {
   
 }
 
-<<<<<<< Updated upstream
-void draw() {
-=======
+
 void draw(){
   background(100,77,33);
   Jacob.display();
   Jacob.movement('w','s','a','d', 3);
->>>>>>> Stashed changes
   
   Aggi.display();
   Aggi.movementarrows(3);

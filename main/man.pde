@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 // Krav til manden
 // kan gå frit, op, ned, til side og man skal selv kunne bestemme 
 // - hvilke taster man vil bruge.
@@ -56,4 +54,3 @@ class Man {
     }
   }
 }
->>>>>>> Stashed changes

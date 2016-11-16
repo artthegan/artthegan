@@ -1,9 +1,9 @@
-class shot {
+class Shot {
   float xCord;
   float yCord;
   float Size;
   
-  shot (float x, float y, float size) {
+  Shot (float x, float y, float size) {
     xCord = x;
     yCord = y;
     Size = size;
@@ -14,12 +14,16 @@ class shot {
     ellipse(xCord, yCord, Size, Size);
   }
   
-<<<<<<< Updated upstream
   void begin(float speed, int xDirection, int yDirection) {
     if (xCord < width && xCord > 0 && yCord < height && yCord > 0) {
      xCord = xCord + speed * xDirection;
      yCord = yCord + speed * yDirection;
     }
+  }
+  
+  void end() {
+    xCord = width + Size;
+    yCord = height + Size;
   }
   
   float xCord() {
@@ -28,11 +32,15 @@ class shot {
   
   float yCord() {
     return yCord;
-=======
+  }
+  
   void shoot(float speed, int xDirection, int yDirection){
      xCord = speed * (xDirection);
      yCord = speed * (yDirection);
->>>>>>> Stashed changes
   }
   
+
+  float Size() {
+   return Size; 
+  }
 }
