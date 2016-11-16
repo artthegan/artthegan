@@ -10,11 +10,13 @@ class Man {
   float sizeHeight;
   float xCord;
   float yCord;
+  float size;
   
 
-  Man (float Width, float Height, float x, float y) {
-    sizeWidth = Width;
-    sizeHeight = Height; 
+  Man (float playerSize, float x, float y) {
+    size = playerSize;
+    sizeWidth = playerSize;
+    sizeHeight = playerSize; 
     xCord = x;
     yCord = y;
   }
@@ -54,9 +56,12 @@ class Man {
     }
   }
   float xCord() {
-    return xCord;
+    return xCord + (size/2);
   }
   float yCord() {
-    return yCord;
+    return yCord + (size/2);
+  }
+  float Size() {
+    return size;
   }
 }

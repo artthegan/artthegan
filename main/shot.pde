@@ -3,9 +3,9 @@ class Shot {
   float yCord;
   float Size;
   
-  Shot (float x, float y, float size) {
-    xCord = x;
-    yCord = y;
+  Shot (Man man, float size) {
+    xCord = man.xCord;
+    yCord = man.yCord;
     Size = size;
   }
   
@@ -39,8 +39,7 @@ class Shot {
      yCord = speed * (yDirection);
   }
   
-
   float Size() {
-   return Size; 
+   return Size;
   }
 }

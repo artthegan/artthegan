@@ -12,9 +12,9 @@ class Game {
     }
   }
   
-  void collision(float playerSize, float xCordPlayer, float yCordPlayer, int playerNumber, Shot bullet) {
+  void collision(Man man, int playerNumber, Shot bullet) {
     //detects if distance between player and bullet centrum is less than or equal to their sizes added.
-    if (dist(xCordPlayer, yCordPlayer, bullet.xCord, bullet.yCord) <= (playerSize + bullet.Size)) {
+    if (dist(man.xCord, man.yCord, bullet.xCord, bullet.yCord) <= (man.size + bullet.Size)) {
       player[playerNumber - 1]--;
       bullet.end();
     }
