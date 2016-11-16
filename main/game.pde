@@ -47,8 +47,17 @@ class Game {
     text(text, xCord, yCord);
   }
   
-  void gun(Man man) {
-    
+  void Trigger(char button, Man man) {
+    ArrayList<Shot> shots = new ArrayList<Shot>();
+    while(keyPressed && key == button) {
+      //get a customerName
+      //get an amount
+      for (int shotNumber = 0; ; shotNumber++) { 
+        shots.add(shotNumber, new Shot(man, 10));
+        
+        shots.get(shotNumber).begin(3, man.xDirection);
+      }
+    }
     
   }
 }

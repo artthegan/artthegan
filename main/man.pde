@@ -24,7 +24,7 @@ class Man {
   void display() {
     rect(xCord, yCord, sizeWidth, sizeHeight);
   }
-
+  
   void movement(char up, char down, char left, char right, int speed) {
     
     if(keyPressed) {
