@@ -56,10 +56,10 @@ class Man {
     }
   }
   float xCord() {
-    return xCord + (size/2);
+    return (xCord + (size/2));
   }
   float yCord() {
-    return yCord + (size/2);
+    return (yCord + (size/2));
   }
   float Size() {
     return size;
