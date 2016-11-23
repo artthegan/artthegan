@@ -1,10 +1,3 @@
-// Krav til manden
-// kan gå frit, op, ned, til side og man skal selv kunne bestemme 
-// - hvilke taster man vil bruge.
-// Der er skal være to mænd 
-
-
-
 class Man {
   float sizeWidth;
   float sizeHeight;
