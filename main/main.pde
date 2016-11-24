@@ -11,7 +11,7 @@ void draw(){
   background(100,1,33);
   
   game.score(1, 15);
-  game.Trigger('x', Jacob, Aggi, 2);
+  //game.Trigger('x', Jacob, Aggi, 2);
   
   Jacob.display();
   Jacob.movement('w','s','a','d', 3);
