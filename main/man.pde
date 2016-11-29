@@ -7,15 +7,20 @@ class Man {
   String direction;
   float xDirection;
   float yDirection;
+  boolean boolUp = false;
+  boolean boolDown = false;
+  boolean boolRight = false;
+  boolean boolLeft = false;
   
 
-  Man (float playerSize, float x, float y) {
+  Man (float playerSize, float x, float y, char up, char down, char left, char right) {
     size = playerSize;
     sizeWidth = playerSize;
     sizeHeight = playerSize; 
     xCord = x;
     yCord = y;
     direction = "up";
+    
   }
   
   void display() {
@@ -39,25 +44,48 @@ class Man {
       rect((xCord + (size / 2) + miniRectSize), yCord, miniRectSize, miniRectSize);
     }
   }
-   
-  void movement(char up, char down, char left, char right, int speed) {
-    
-    if(keyPressed) {
+   void keyReleased() {
       if (key == up) {
-        yCord -= speed;
-        direction = "up";
+        boolUp = true;
       } else if (key == down) {
-        yCord += speed;
-        direction = "down";
+        boolDown = true;
       }
       if (key == left) {
-        xCord -= speed;
-        direction = "left";
+        boolLeft = true;
       } else if (key == right) {
-        xCord += speed;
-        direction = "right";
+        boolRight = true;
       }
     }
+    
+  void movement(int speed) {
+    if(keyPressed) {
+      if (key == up) {
+        boolUp = true;
+      } else if (key == down) {
+        boolDown = true;
+      }
+      if (key == left) {
+        boolLeft = true;
+      } else if (key == right) {
+        boolRight = true;
+      }
+    }
+    if (boolUp) {
+      yCord -= speed;
+      direction = "up";
+    }
+    if (boolDown) {
+      yCord += speed;
+      direction = "down";
+     }
+     if (boolLeft) {
+      yCord += speed;
+      direction = "left";
+     }
+     if (boolRight) {
+      yCord += speed;
+      direction = "Right";
+     }
   }
   
     void movementarrows(int speed) {
