@@ -1,3 +1,7 @@
+import ddf.minim.*;
+Minim minim;
+AudioPlayer player;
+
 Game game = new Game(2, 3);
 
 Man Jacob = new Man(30, 50, 250);
@@ -9,6 +13,9 @@ void setup() {
 
 void draw(){
   background(100,1,33);
+  
+  minim = new Minim(this);
+  player = minim.loadFile("http://soundimage.org/wp-content/uploads/2014/04/Game-Menu.mp3");
   
   game.score(1, 15);
   //game.Trigger('x', Jacob, Aggi, 2);
