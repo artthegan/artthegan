@@ -9,13 +9,15 @@ Man Aggi = new Man(30, 450, 250);
 
 void setup() {
   size(500, 500);
+  
+  minim = new Minim(this);
+  player = minim.loadFile("sound.mp3");
 }
 
 void draw(){
   background(100,1,33);
   
-  minim = new Minim(this);
-  player = minim.loadFile("http://soundimage.org/wp-content/uploads/2014/04/Game-Menu.mp3");
+  player.play();
   
   game.score(1, 15);
   //game.Trigger('x', Jacob, Aggi, 2);
