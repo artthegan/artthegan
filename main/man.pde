@@ -13,14 +13,17 @@ class Man {
   boolean boolLeft = false;
   
 
-  Man (float playerSize, float x, float y, char up, char down, char left, char right) {
+  Man (float playerSize, float x, float y, char upp, char downn, char leftt, char rightt) {
     size = playerSize;
     sizeWidth = playerSize;
     sizeHeight = playerSize; 
     xCord = x;
     yCord = y;
     direction = "up";
-    
+    char up = upp;
+    char down = downn;
+    char left = leftt;
+    char right = rightt;
   }
   
   void display() {
@@ -44,19 +47,18 @@ class Man {
       rect((xCord + (size / 2) + miniRectSize), yCord, miniRectSize, miniRectSize);
     }
   }
-   void keyReleased() {
-      if (key == up) {
-        boolUp = true;
+  void keyReleased(char up, char down, char left, char right) {
+    if (key == up) {
+        boolUp = false;
       } else if (key == down) {
-        boolDown = true;
+        boolDown = false;
       }
       if (key == left) {
-        boolLeft = true;
+        boolLeft = false;
       } else if (key == right) {
-        boolRight = true;
+        boolRight = false;
       }
-    }
-    
+  }
   void movement(int speed) {
     if(keyPressed) {
       if (key == up) {
@@ -69,6 +71,9 @@ class Man {
       } else if (key == right) {
         boolRight = true;
       }
+    }
+    if(keyReleased) {
+      
     }
     if (boolUp) {
       yCord -= speed;

@@ -4,8 +4,8 @@ AudioPlayer player;
 
 Game game = new Game(2, 3);
 
-Man Jacob = new Man(30, 50, 250);
-Man Aggi = new Man(30, 450, 250);
+Man Jacob = new Man(30, 50, 250, 'w','s','a','d');
+Man Aggi = new Man(30, 450, 250, 'w','s','a','d');
 
 void setup() {
   size(500, 500);
@@ -23,7 +23,8 @@ void draw(){
   //game.Trigger('x', Jacob, Aggi, 2);
   
   Jacob.display();
-  Jacob.movement('w','s','a','d', 3);
+  Jacob.movement(3);
+  Jacob.keyReleased('w','s','a','d');
   
   Aggi.display();
   Aggi.movementarrows(3);
